@@ -18,6 +18,8 @@ export function initScroll({ haze }) {
   document.querySelectorAll('section[data-haze]').forEach((section) => {
     const target = { level: Number(section.dataset.haze), wind: Number(section.dataset.wind || 0) };
     const go = () => {
+      // Start from wherever the haze is now; another module may have moved it.
+      Object.assign(state, haze.getState());
       if (reduceMotion) { Object.assign(state, target); apply(); return; }
       gsap.to(state, { ...target, duration: 1.2, ease: 'power1.inOut', overwrite: true, onUpdate: apply });
     };

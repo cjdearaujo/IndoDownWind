@@ -84,6 +84,7 @@ export function createHaze(canvas) {
   return {
     setLevel(n) { level = Math.max(0, Math.min(1, n)); if (reduceMotion) draw(); },
     setWind(x) { wind = Math.max(-1, Math.min(1, x)); if (reduceMotion) draw(); },
+    getState() { return { level, wind }; },
     destroy() {
       stop();
       window.removeEventListener('resize', resize);

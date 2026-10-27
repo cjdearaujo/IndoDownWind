@@ -3,13 +3,14 @@
 import { loadAll } from './data.js';
 import { createHaze } from './haze.js';
 import { initScroll } from './scroll.js';
+import { initFlip } from './flip.js';
 
 async function start() {
   const haze = createHaze(document.getElementById('haze'));
   initScroll({ haze });
   try {
     const data = await loadAll();
-    console.log('Data loaded', Object.keys(data));
+    initFlip({ data, haze });
     // Later steps wire modules here, for example: initCityChart({ data });
   } catch (err) {
     console.error(err);

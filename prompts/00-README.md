@@ -46,7 +46,7 @@ Record every prompt actually used, including follow-ups. This log is part of the
 | 03 | Verified (scaffold) | | No stray colours; contrast ink 16.96:1, ink-dim 8.84:1 on --night | abfecbd |
 | 04 | Verified (scaffold) | | Copy and terms OK. Unsure: #cities/#zones/#meaning use the prompt titles as eyebrows with editorial h2s; kept as scaffolded | abfecbd |
 | 05 | As written (via MASTER-PROMPT) | Raised haze alpha so it reads on the night background | Haze + scroll engine; reduced motion sets haze values instantly, no tweens | see git log |
-| 06 | | | | |
+| 06 | As written | Added haze.getState() (read by scroll.js and flip.js) so tweens start from the current haze; pin uses refreshPriority so later triggers include pin spacing; columns dim their children because the reveal tween owns the column opacity | Flip pinned on desktop, per-column triggers on phones and reduced motion | see git log |
 | 07 | | | | |
 | 08 | | | | |
 | 09 | | | | |
