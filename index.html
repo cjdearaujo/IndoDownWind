@@ -31,11 +31,11 @@
         <h2 id="flip-title">Two winters, opposite outcomes</h2>
         <p>The two winters sat on opposite sides of a natural Pacific Ocean swing called <span class="term" data-term="ENSO">ENSO</span>.</p>
         <div class="flip-columns">
-          <article class="flip-col" data-phase="lanina">
+          <article data-reveal class="flip-col" data-phase="lanina">
             <h3>2022-23 · <span class="term" data-term="La Niña">La Niña</span></h3>
             <p>North India was remarkably clean, with <span class="term" data-term="PM2.5">PM2.5</span> down by up to 30% from the average of the previous three years. The peninsula was dirtier, and Mumbai spiked by 45%.</p>
           </article>
-          <article class="flip-col" data-phase="elnino">
+          <article data-reveal class="flip-col" data-phase="elnino">
             <h3>2023-24 · <span class="term" data-term="El Niño">El Niño</span></h3>
             <p>The pattern reversed. Jaipur rose about 50% and Delhi by over 10%, while the peninsula got sharply cleaner.</p>
           </article>
@@ -55,7 +55,7 @@
           <button role="tab" id="tab-2022" aria-selected="true" aria-controls="city-panel" data-winter="2022-23">Winter 2022-23</button>
           <button role="tab" id="tab-2023" aria-selected="false" aria-controls="city-panel" data-winter="2023-24" tabindex="-1">Winter 2023-24</button>
         </div>
-        <figure id="city-panel" role="tabpanel" aria-labelledby="tab-2022">
+        <figure data-reveal id="city-panel" role="tabpanel" aria-labelledby="tab-2022">
           <canvas id="city-chart" role="img" aria-label="Bar chart of PM2.5 change by city"></canvas>
           <figcaption>Percent change in PM2.5 vs the 2019-22 winter average. Approximate where marked.</figcaption>
         </figure>
@@ -68,10 +68,10 @@
         <p class="eyebrow">The weather</p>
         <h2 id="weather-title">Why the weather decides</h2>
         <div class="weather-grid">
-          <article><h3>Wind</h3><p>Strong winds scatter pollution and carry it away. Weak winds let it pile up. That is <span class="term" data-term="stagnation">stagnation</span>.</p><div class="weather-visual" data-visual="wind"></div></article>
-          <article><h3>Rain and pressure</h3><p>Rain can wash pollution out of the air, but high pressure can trap it. In Jaipur, rain was tied to cleaner air in 2022-23, while in 2023-24 pressure mattered more and pollution spiked after rain.</p><div class="weather-visual" data-visual="rain"></div></article>
-          <article><h3>A shallow lid</h3><p>A shallow <span class="term" data-term="boundary layer">boundary layer</span> squeezes pollution into a thin band near the ground, where people breathe it.</p><div class="weather-visual" data-visual="lid"></div></article>
-          <article><h3>Where the air came from</h3><p>Researchers traced the air back with <span class="term" data-term="back-trajectory">back-trajectories</span>. Jaipur kept receiving polluted northern air in the El Niño winter. Hyderabad received cleaner marine and southern air.</p><div class="weather-visual" data-visual="trajectory"></div></article>
+          <article data-reveal><h3>Wind</h3><p>Strong winds scatter pollution and carry it away. Weak winds let it pile up. That is <span class="term" data-term="stagnation">stagnation</span>.</p><div class="weather-visual" data-visual="wind"></div></article>
+          <article data-reveal><h3>Rain and pressure</h3><p>Rain can wash pollution out of the air, but high pressure can trap it. In Jaipur, rain was tied to cleaner air in 2022-23, while in 2023-24 pressure mattered more and pollution spiked after rain.</p><div class="weather-visual" data-visual="rain"></div></article>
+          <article data-reveal><h3>A shallow lid</h3><p>A shallow <span class="term" data-term="boundary layer">boundary layer</span> squeezes pollution into a thin band near the ground, where people breathe it.</p><div class="weather-visual" data-visual="lid"></div></article>
+          <article data-reveal><h3>Where the air came from</h3><p>Researchers traced the air back with <span class="term" data-term="back-trajectory">back-trajectories</span>. Jaipur kept receiving polluted northern air in the El Niño winter. Hyderabad received cleaner marine and southern air.</p><div class="weather-visual" data-visual="trajectory"></div></article>
         </div>
         <p class="weather-note">These are the mechanisms the study's authors describe. The study shows association, not proof of cause.</p>
       </div>
@@ -92,7 +92,7 @@
         <p class="eyebrow">What this means</p>
         <h2 id="meaning-title">Plan for the weather, not just the smokestacks</h2>
         <p>Our takeaway: low local emissions do not guarantee clean air when the wind stalls, and strong winds can hide high emissions. So plans need to look beyond a single city and a single year.</p>
-        <aside class="caveat" aria-labelledby="caveat-title">
+        <aside data-reveal class="caveat" aria-labelledby="caveat-title">
           <h3 id="caveat-title">What this study does not show</h3>
           <ul>
             <li>It shows an association, not proof of cause.</li>
