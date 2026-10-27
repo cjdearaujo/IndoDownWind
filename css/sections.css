@@ -85,3 +85,18 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 .wx-head-north { fill: var(--haze-mid); }
 .wx-head-south { fill: var(--clean); }
 .wx-place { fill: var(--ink); }
+/* Climate zones (js/zones.js) */
+.zone-blocks { display: grid; gap: var(--space-5); grid-template-columns: 1fr; margin-block: var(--space-6) var(--space-5); }
+@media (min-width: 760px) { .zone-blocks { grid-template-columns: 1fr 1fr; } }
+.zone-block { border: 1px solid var(--accent-line); border-radius: var(--radius); padding: var(--space-5); background: var(--night-2); }
+.zone-sub, .zone-note, .zone-not-reported { color: var(--ink-dim); font-size: var(--step--1); }
+.zone-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: var(--space-1) var(--space-3); align-items: center; margin-block: var(--space-3); }
+.zone-period { font-size: var(--step--1); color: var(--ink-dim); }
+.zone-track { height: 1.25rem; background: var(--night); border: 1px solid var(--accent-line); border-radius: 4px; overflow: hidden; }
+.zone-fill { height: 100%; width: 0; background: var(--haze-mid); transition: width 1.2s var(--ease-out); }
+.zone-fill.is-in { width: var(--w); }
+.zone-value { grid-column: 2; font-size: var(--step--1); }
+.zone-places { padding-left: 1.2rem; margin: 0 0 var(--space-5); }
+.zone-places li { margin-bottom: var(--space-2); }
+.zone-callout { border-left: 3px solid var(--clean); padding: var(--space-3) var(--space-5); background: var(--night-2); border-radius: 0 var(--radius) var(--radius) 0; }
+.zone-callout p:last-child { margin-bottom: 0; }

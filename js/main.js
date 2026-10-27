@@ -6,6 +6,7 @@ import { initScroll } from './scroll.js';
 import { initFlip } from './flip.js';
 import { initCityChart } from './charts.js';
 import { initWeather } from './weather.js';
+import { initZones } from './zones.js';
 
 async function start() {
   const haze = createHaze(document.getElementById('haze'));
@@ -15,6 +16,7 @@ async function start() {
     initFlip({ data, haze });
     initCityChart({ data });
     initWeather();
+    initZones({ data });
   } catch (err) {
     console.error(err);
   }
