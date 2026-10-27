@@ -4,6 +4,7 @@ import { loadAll } from './data.js';
 import { createHaze } from './haze.js';
 import { initScroll } from './scroll.js';
 import { initFlip } from './flip.js';
+import { initCityChart } from './charts.js';
 
 async function start() {
   const haze = createHaze(document.getElementById('haze'));
@@ -11,7 +12,7 @@ async function start() {
   try {
     const data = await loadAll();
     initFlip({ data, haze });
-    // Later steps wire modules here, for example: initCityChart({ data });
+    initCityChart({ data });
   } catch (err) {
     console.error(err);
   }
