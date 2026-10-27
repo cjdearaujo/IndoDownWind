@@ -52,7 +52,7 @@ Record every prompt actually used, including follow-ups. This log is part of the
 | 09 | As written | | Bars, notes, places and farming callout all rendered from climate_zones.json; bars grow via IntersectionObserver + CSS transition. Unsure: 33% shown as "about 33% (a third)" since the article says "a third" | see git log |
 | 10 | As written | | 8 terms matched, no warnings; tap/focus/Escape tested; tooltip clamped inside 375 px | see git log |
 | 11 | As written | | Full run-through and Try again tested; right/wrong shown by text, ✓/✗ and solid vs dashed border | see git log |
-| 12 | | | | |
+| 12 | As written | | Takeaway rewritten (two paragraphs, under 120 words), caveat panel with icon, closing question and source block; haze 0.25 already set on #meaning so scroll.js unchanged | see git log |
 | 13 | | | | |
 | 14 | | | | |
 | 15 | | | | |
