@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IndoDownWind: how weather moves India's winter pollution</title>
+  <meta name="description" content="Two back-to-back winters flipped India's pollution map with almost no change in emissions. An explainer on weather, El Niño and shifting climate zones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header"><div class="container"><a class="wordmark" href="#hero">IndoDownWind</a></div></header>
+  <canvas id="haze" aria-hidden="true"></canvas>
+  <main id="content">
+
+    <section id="hero" data-haze="0.5" data-wind="0.1" aria-labelledby="hero-title">
+      <p class="eyebrow">India · Winter air</p>
+      <h1 id="hero-title">Same emissions. Different air.</h1>
+      <p class="lede">In two back-to-back winters, pollution moved from one half of India to the other. Emissions stayed broadly similar. The weather changed.</p>
+      <p class="scroll-cue" aria-hidden="true">Scroll</p>
+    </section>
+
+    <section id="flip" aria-labelledby="flip-title">
+      <div class="container">
+        <p class="eyebrow">The flip</p>
+        <h2 id="flip-title">Two winters, opposite outcomes</h2>
+        <p>The two winters sat on opposite sides of a natural Pacific Ocean swing called <span class="term" data-term="ENSO">ENSO</span>.</p>
+        <div class="flip-columns">
+          <article class="flip-col" data-phase="lanina">
+            <h3>2022-23 · <span class="term" data-term="La Niña">La Niña</span></h3>
+            <p>North India was remarkably clean, with <span class="term" data-term="PM2.5">PM2.5</span> down by up to 30% from the average of the previous three years. The peninsula was dirtier, and Mumbai spiked by 45%.</p>
+          </article>
+          <article class="flip-col" data-phase="elnino">
+            <h3>2023-24 · <span class="term" data-term="El Niño">El Niño</span></h3>
+            <p>The pattern reversed. Jaipur rose about 50% and Delhi by over 10%, while the peninsula got sharply cleaner.</p>
+          </article>
+        </div>
+        <p class="flip-note">Emissions and pollution-control policy did not change much over this period. The study finds an association with these weather patterns, not proof of cause.</p>
+        <p class="haze-key">The haze behind this page follows north India's winter air: thinner in 2022-23, thicker in 2023-24. The peninsula moved the opposite way.</p>
+        <div class="flip-figures"></div>
+      </div>
+    </section>
+
+    <section id="cities" data-haze="0.5" data-wind="0" aria-labelledby="cities-title">
+      <div class="container">
+        <p class="eyebrow">City by city</p>
+        <h2 id="cities-title">Who got cleaner, who got dirtier</h2>
+        <p>The same cities, the same method, two very different winters. Switch between them to watch the map flip.</p>
+        <div class="tabs" role="tablist" aria-label="Winter">
+          <button role="tab" id="tab-2022" aria-selected="true" aria-controls="city-panel" data-winter="2022-23">Winter 2022-23</button>
+          <button role="tab" id="tab-2023" aria-selected="false" aria-controls="city-panel" data-winter="2023-24" tabindex="-1">Winter 2023-24</button>
+        </div>
+        <figure id="city-panel" role="tabpanel" aria-labelledby="tab-2022">
+          <canvas id="city-chart" role="img" aria-label="Bar chart of PM2.5 change by city"></canvas>
+          <figcaption>Percent change in PM2.5 vs the 2019-22 winter average. Approximate where marked.</figcaption>
+        </figure>
+        <p id="city-chart-summary" class="chart-summary"></p>
+      </div>
+    </section>
+
+    <section id="weather" data-haze="0.6" data-wind="0" aria-labelledby="weather-title">
+      <div class="container">
+        <p class="eyebrow">The weather</p>
+        <h2 id="weather-title">Why the weather decides</h2>
+        <div class="weather-grid">
+          <article><h3>Wind</h3><p>Strong winds scatter pollution and carry it away. Weak winds let it pile up. That is <span class="term" data-term="stagnation">stagnation</span>.</p><div class="weather-visual" data-visual="wind"></div></article>
+          <article><h3>Rain and pressure</h3><p>Rain can wash pollution out of the air, but high pressure can trap it. In Jaipur, rain was tied to cleaner air in 2022-23, while in 2023-24 pressure mattered more and pollution spiked after rain.</p><div class="weather-visual" data-visual="rain"></div></article>
+          <article><h3>A shallow lid</h3><p>A shallow <span class="term" data-term="boundary layer">boundary layer</span> squeezes pollution into a thin band near the ground, where people breathe it.</p><div class="weather-visual" data-visual="lid"></div></article>
+          <article><h3>Where the air came from</h3><p>Researchers traced the air back with <span class="term" data-term="back-trajectory">back-trajectories</span>. Jaipur kept receiving polluted northern air in the El Niño winter. Hyderabad received cleaner marine and southern air.</p><div class="weather-visual" data-visual="trajectory"></div></article>
+        </div>
+        <p class="weather-note">These are the mechanisms the study's authors describe. The study shows association, not proof of cause.</p>
+      </div>
+    </section>
+
+    <section id="zones" data-haze="0.2" data-wind="0.3" aria-labelledby="zones-title">
+      <div class="container">
+        <p class="eyebrow">The map is shifting</p>
+        <h2 id="zones-title">The dry zone is moving east</h2>
+        <p>Over 70 years, the <span class="term" data-term="hot semi-arid zone">hot semi-arid zone</span> in northwest India grew from about a quarter of the region to a third, and pushed east into Uttar Pradesh, one of India's key farming regions. The timing of sowing and harvesting there needs watching.</p>
+        <p>In peninsular India the dry zone shrank from about 30% of the region to 16%, a change the authors attribute to rising rainfall over the south.</p>
+        <div class="zone-bars"></div>
+      </div>
+    </section>
+
+    <section id="meaning" data-haze="0.25" data-wind="0" aria-labelledby="meaning-title">
+      <div class="container">
+        <p class="eyebrow">What this means</p>
+        <h2 id="meaning-title">Plan for the weather, not just the smokestacks</h2>
+        <p>Our takeaway: low local emissions do not guarantee clean air when the wind stalls, and strong winds can hide high emissions. So plans need to look beyond a single city and a single year.</p>
+        <aside class="caveat" aria-labelledby="caveat-title">
+          <h3 id="caveat-title">What this study does not show</h3>
+          <ul>
+            <li>It shows an association, not proof of cause.</li>
+            <li>The two winters were unusual, so the pattern should not be assumed to repeat.</li>
+            <li>It does not say El Niño always worsens air in Delhi or north India.</li>
+          </ul>
+        </aside>
+        <div id="quiz-root"></div>
+        <p class="source">Source: Times of India report on the study "Air quality in flux: The baffling ENSO transition in India" (Atmospheric Pollution Research), and an IMD/IITM study of India's climate zones.</p>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer"><div class="container"><p><span class="wordmark">IndoDownWind</span> · An explainer on weather, pollution and shifting climate zones, based on a Times of India report. Values marked approximate are read from the report's chart.</p></div></footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+[
+  {
+    "q": "Which best describes what happened in the two winters?",
+    "options": [
+      "Emissions fell sharply in 2022-23, then rose sharply in 2023-24",
+      "Pollution fell everywhere in both winters",
+      "North India was dirtier than usual in both winters",
+      "North India was cleaner and the peninsula dirtier in 2022-23, then the pattern reversed in 2023-24, with no major change in emissions or policy"
+    ],
+    "answer": 3,
+    "explain": "In 2022-23 north India's PM2.5 was down by up to 30% while Mumbai rose 45%. In 2023-24 it flipped: Jaipur rose about 50% and Delhi over 10%, while the peninsula got cleaner. The study found no major change in emissions or pollution-control policy."
+  },
+  {
+    "q": "In Jaipur, what did the study find about rain and pressure?",
+    "options": [
+      "In 2022-23 rain was more strongly linked to lower PM2.5. In 2023-24 surface pressure mattered more, and pollution spiked after rain",
+      "Rain cleaned the air in every year",
+      "Pressure had no effect in either winter",
+      "Rain made the air dirtier in 2022-23"
+    ],
+    "answer": 0,
+    "explain": "Rain can wash pollution out, but high pressure can trap it. This finding is about Jaipur only, not every city."
+  },
+  {
+    "q": "Delhi-NCR has relatively low local emissions one winter. What does the study suggest?",
+    "options": [
+      "Its air will be clean",
+      "Its air will be dirty",
+      "Air can still turn bad if large-scale circulation stagnates, and strong winds can dilute even substantial emissions",
+      "Emissions no longer matter"
+    ],
+    "answer": 2,
+    "explain": "Low local or farm-fire emissions do not automatically guarantee cleaner air when circulation stagnates. And strong winds can disperse or divert even substantial emissions."
+  },
+  {
+    "q": "What did the climate-zone study find for northwest India between 1951-60 and 1991-2020?",
+    "options": [
+      "The hot semi-arid zone shrank to less than a fifth of the region",
+      "The hot semi-arid zone grew from about a quarter of the region to a third, pushing east into Uttar Pradesh",
+      "Nothing changed",
+      "The tropical savannah zone took over most of the region"
+    ],
+    "answer": 1,
+    "explain": "An area equal to roughly 7% of the region moved into the drier zone. The tropical savannah growth was in the peninsula, where the hot semi-arid zone shrank from about 30% to 16%. The article does not report effects on crop yields."
+  },
+  {
+    "q": "Which statement does the study support?",
+    "options": [
+      "El Niño always makes Delhi's air worse",
+      "Pollution-control policies have no effect",
+      "La Niña guarantees clean air in the north",
+      "The two winters show a link between weather patterns and where pollution built up, but not proof of cause, and not a forecast"
+    ],
+    "answer": 3,
+    "explain": "The authors say the correlations do not establish direct causation, cannot be extrapolated to other years, and that the two winters studied were unusual."
+  }
+]

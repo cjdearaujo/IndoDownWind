@@ -1,0 +1,100 @@
+{
+  "source": "Times of India, 'Study traces how an El Niño changed the pollution map' (Amit Bhattacharya). Study: 'Air quality in flux: The baffling ENSO transition in India', Atmospheric Pollution Research. Related IMD/IITM climate-zone study (lead author Ananya Karmakar).",
+  "note": "Facts below are taken from the article text. Anything marked approximate was read from a printed chart and is not exact. Glossary wording lives only in data/glossary.json.",
+  "evidence": [
+    {
+      "id": "E1",
+      "topic": "enso_flip",
+      "fact": "Winter 2022-23 was a La Niña winter: north India was remarkably clean, with PM2.5 down by up to 30% from the average of the previous three years, while peninsular India was dirtier."
+    },
+    {
+      "id": "E2",
+      "topic": "enso_flip",
+      "fact": "In winter 2022-23, Mumbai PM2.5 spiked by 45% against the 2019-22 average."
+    },
+    {
+      "id": "E3",
+      "topic": "enso_flip",
+      "fact": "In winter 2023-24 (El Niño), the pattern reversed: PM2.5 spiraled in the north and fell sharply in peninsular India."
+    },
+    {
+      "id": "E4",
+      "topic": "enso_flip",
+      "fact": "In 2023-24, Jaipur PM2.5 rose about 50% over the 2019-22 average and Delhi logged a rise of over 10%."
+    },
+    {
+      "id": "E5",
+      "topic": "mechanism_lanina",
+      "fact": "During La Niña 2022-23, stronger winds over north India dispersed emissions from stubble burning and local sources. The altered circulation bypassed Delhi and surroundings and carried pollutants south to peninsular India, raising PM2.5 in cities such as Mumbai and Thiruvananthapuram."
+    },
+    {
+      "id": "E6",
+      "topic": "mechanism_elnino",
+      "fact": "Under El Niño, winds over northern India were weaker and passed through areas including Delhi and Jaipur instead of carrying pollutants away. The resulting stagnation favoured accumulation of PM2.5."
+    },
+    {
+      "id": "E7",
+      "topic": "weather_drivers",
+      "fact": "Rain can remove pollutants from air, while high pressure, weak winds and a shallow boundary layer can trap them close to the ground. In Jaipur, rainfall was more strongly associated with lower PM2.5 during 2022-23, whereas surface pressure became a more important factor during 2023-24, leading to pollution spikes after rain."
+    },
+    {
+      "id": "E8",
+      "topic": "transport",
+      "fact": "Backward air-mass trajectories showed Jaipur kept receiving air from polluted northern regions during the El Niño winter, while Hyderabad received more marine and southern air, helping explain why its pollution moved in the opposite direction."
+    },
+    {
+      "id": "E9",
+      "topic": "magnitude",
+      "fact": "Year-to-year PM2.5 variation from the 2019-22 average ranged from about a 40% decline to a 70% increase, despite no major change in emissions or pollution-control policies in the period."
+    },
+    {
+      "id": "E10",
+      "topic": "caveat",
+      "fact": "The authors stress the correlations neither establish direct causation nor can be extrapolated to other years. They say they are not implying the 2023-24 El Niño pattern will repeat, and that the two years studied were unusual and unique. The study does not establish that El Niño invariably worsens air quality in Delhi or north India."
+    },
+    {
+      "id": "E11",
+      "topic": "delhi_implication",
+      "fact": "For Delhi-NCR, relatively low local or agricultural emissions do not automatically guarantee cleaner air if large-scale circulation turns stagnant. Conversely, even substantial emissions can have a smaller local impact when strong winds efficiently disperse or divert them."
+    },
+    {
+      "id": "E12",
+      "topic": "scale",
+      "fact": "The winter pollution story may begin in Delhi and its neighbourhood, but the weather that decides its intensity is increasingly written on a much larger canvas."
+    },
+    {
+      "id": "E13",
+      "topic": "climate_zone_north",
+      "fact": "In northwest India the hot semi-arid zone grew from about a quarter of the region's area in 1951-1960 to a third in 1991-2020, while the temperate zone shrank from about a quarter to less than a fifth, so an area equal to roughly 7% of the region moved into the drier zone as temperatures rose and rainfall declined."
+    },
+    {
+      "id": "E14",
+      "topic": "climate_zone_peninsula",
+      "fact": "Peninsular India's hot semi-arid zone shrank from about 30% of the region to 16%, and most of that land moved into the tropical savannah zone, which now covers three-quarters of the peninsula, a change the authors attribute to rising rainfall over southern India."
+    },
+    {
+      "id": "E15",
+      "topic": "climate_zone_shifts",
+      "fact": "Marathwada and west Vidarbha in Maharashtra moved into the hot semi-arid zone, and the tropical monsoon zone extended along the Konkan coast, coastal Karnataka and Kerala."
+    },
+    {
+      "id": "E16",
+      "topic": "agriculture",
+      "fact": "The clearest change in India's climate map from 1951 to 2020 was in the north, where the hot, dry zone has pushed east into Uttar Pradesh. Because this is one of the country's most important farming regions, the timing of sowing and harvesting needs to be watched closely, said the lead author."
+    },
+    {
+      "id": "E17",
+      "topic": "agriculture",
+      "fact": "The scientists highlight implications for agriculture and the need to track long-term climate shifts; the study could be handy for farm-sector policymakers."
+    }
+  ],
+  "chart_values_approximate": {
+    "note": "Only the four values in stated_in_text are exact. Other values were read by measuring bar lengths on a photo of the printed chart 'A year apart and poles apart' (percent change in PM2.5 vs the 2019-22 average); they are approximate, rounded to the nearest 5 points, and may be off by about 5 points.",
+    "stated_in_text": {
+      "Mumbai_2022_23": "+45%",
+      "Jaipur_2023_24": "about +50%",
+      "Delhi_2023_24": "over +10%",
+      "North_2022_23": "down by up to 30%"
+    }
+  }
+}

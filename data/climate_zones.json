@@ -1,0 +1,42 @@
+{
+  "source": "Times of India report on an IMD/IITM study of India's climate zones, 1951-2020 (lead author Ananya Karmakar)",
+  "northwest": {
+    "hot_semi_arid": {
+      "1951-60": 25,
+      "1991-2020": 33,
+      "qualifier": "about a quarter of the region's area, grew to a third"
+    },
+    "temperate": {
+      "1951-60": 25,
+      "1991-2020": null,
+      "qualifier": "shrank from about a quarter to less than a fifth (the article gives no exact later value)"
+    },
+    "area_moved_to_drier_zone_pct": 7,
+    "area_moved_qualifier": "roughly 7% of the region moved into the drier zone as temperatures rose and rainfall declined"
+  },
+  "peninsula": {
+    "hot_semi_arid": {
+      "before": 30,
+      "after": 16,
+      "qualifier": "about 30% of the region fell to 16%"
+    },
+    "tropical_savannah_share_now": 75,
+    "tropical_savannah_qualifier": "now covers about three-quarters of the peninsula, a change the authors attribute to rising rainfall over southern India"
+  },
+  "places_that_moved": [
+    {
+      "place": "Uttar Pradesh",
+      "change": "the hot, dry zone pushed east into it"
+    },
+    {
+      "place": "Marathwada and west Vidarbha (Maharashtra)",
+      "change": "moved into the hot semi-arid zone"
+    },
+    {
+      "place": "Konkan coast, coastal Karnataka, Kerala",
+      "change": "the tropical monsoon zone extended along them"
+    }
+  ],
+  "why_farmers_care": "Uttar Pradesh is one of the country's most important farming regions, so the timing of sowing and harvesting needs to be watched closely.",
+  "not_reported": "The article does not report effects on crop yields or give specific sowing dates."
+}

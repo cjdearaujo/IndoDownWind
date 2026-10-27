@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "baseline": "2019-22 winter average",
+    "phases": {
+      "2022-23": "La Niña",
+      "2023-24": "El Niño"
+    },
+    "unit": "percent change in PM2.5 versus the baseline",
+    "chart_title_in_article": "A year apart and poles apart: how pollution levels flipped in winters of 2022-23 and 2023-24",
+    "note": "Percent change in PM2.5 vs the 2019-22 winter average. Values marked approximate are read from the article's chart.",
+    "how_approximate_values_were_made": "Bar lengths were measured on a photo of the printed chart and rounded to the nearest 5 points. Expect an error of about 5 points. Values near zero mean the bar was tiny or not visible. The article's chart prints 'Gr Noida', 'Balabgarh' and 'Trivandrum'; they appear here as Greater Noida, Ballabgarh and Thiruvananthapuram. Revised after a second measurement of the north 2022-23 bars (Noida, Rohtak, Greater Noida, Bahadurgarh, Delhi) and Mumbai 2023-24; Rohtak now reaches -30, matching the article's 'up to 30%'.",
+    "stated_in_article_text": {
+      "Mumbai 2022-23": "up 45%",
+      "Jaipur 2023-24": "up about 50%",
+      "Delhi 2023-24": "up over 10%",
+      "North India 2022-23": "down by up to 30%",
+      "range_across_cities": "about 40% decline to 70% increase vs 2019-22 average"
+    },
+    "city_order": [
+      "Noida",
+      "Rohtak",
+      "Greater Noida",
+      "Bahadurgarh",
+      "Delhi",
+      "Jaipur",
+      "Ballabgarh",
+      "Hyderabad",
+      "Vapi",
+      "Mumbai",
+      "Pune",
+      "Chennai",
+      "Thiruvananthapuram"
+    ],
+    "groups": {
+      "north": "North India",
+      "peninsula": "Peninsular India"
+    },
+    "stated_figures": [
+      {
+        "id": "north_2022_23",
+        "label": "North India",
+        "winter": "2022-23",
+        "pct": -30,
+        "qualifier": "up to",
+        "source": "stated",
+        "note": "PM2.5 down by up to 30% vs the 2019-22 average"
+      },
+      {
+        "id": "mumbai_2022_23",
+        "label": "Mumbai",
+        "winter": "2022-23",
+        "pct": 45,
+        "qualifier": null,
+        "source": "stated"
+      },
+      {
+        "id": "jaipur_2023_24",
+        "label": "Jaipur",
+        "winter": "2023-24",
+        "pct": 50,
+        "qualifier": "about",
+        "source": "stated"
+      },
+      {
+        "id": "delhi_2023_24",
+        "label": "Delhi",
+        "winter": "2023-24",
+        "pct": 10,
+        "qualifier": "over",
+        "source": "stated"
+      }
+    ]
+  },
+  "records": [
+    {
+      "city": "Noida",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -25,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Noida",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Rohtak",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -30,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Rohtak",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Greater Noida",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -10,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Greater Noida",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Bahadurgarh",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -25,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Bahadurgarh",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 5,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Delhi",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -10,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Delhi",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 10,
+      "source": "stated",
+      "qualifier": "over"
+    },
+    {
+      "city": "Jaipur",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -5,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Jaipur",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 50,
+      "source": "stated",
+      "qualifier": "about"
+    },
+    {
+      "city": "Ballabgarh",
+      "region": "north",
+      "winter": "2022-23",
+      "pct": -25,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Ballabgarh",
+      "region": "north",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Hyderabad",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 10,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Hyderabad",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": -30,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Vapi",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 30,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Vapi",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": -20,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Mumbai",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 45,
+      "source": "stated",
+      "qualifier": null
+    },
+    {
+      "city": "Mumbai",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": -20,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Pune",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 15,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Pune",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": -5,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Chennai",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 10,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Chennai",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Thiruvananthapuram",
+      "region": "peninsula",
+      "winter": "2022-23",
+      "pct": 30,
+      "source": "approximate",
+      "qualifier": null
+    },
+    {
+      "city": "Thiruvananthapuram",
+      "region": "peninsula",
+      "winter": "2023-24",
+      "pct": 0,
+      "source": "approximate",
+      "qualifier": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "term": "ENSO",
+    "plain": "El Niño-Southern Oscillation: a natural swing in Pacific Ocean temperatures that shifts weather around the world."
+  },
+  {
+    "term": "La Niña",
+    "plain": "The cool phase of ENSO, when parts of the Pacific are cooler than usual."
+  },
+  {
+    "term": "El Niño",
+    "plain": "The warm phase of ENSO, when parts of the Pacific are warmer than usual."
+  },
+  {
+    "term": "PM2.5",
+    "plain": "Tiny particles in the air, thinner than a hair, small enough to get deep into your lungs."
+  },
+  {
+    "term": "boundary layer",
+    "plain": "The lowest layer of air where pollution mixes; when it is shallow, pollution is squeezed close to the ground."
+  },
+  {
+    "term": "stagnation",
+    "plain": "A spell of weak winds when air barely moves, so pollution piles up instead of blowing away."
+  },
+  {
+    "term": "back-trajectory",
+    "plain": "A path traced backwards to show where the air arriving at a city came from."
+  },
+  {
+    "term": "hot semi-arid zone",
+    "plain": "A climate zone that is hot and gets little rain, though not as little as a desert."
+  }
+]
