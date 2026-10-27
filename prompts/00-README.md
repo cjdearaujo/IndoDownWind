@@ -48,7 +48,7 @@ Record every prompt actually used, including follow-ups. This log is part of the
 | 05 | As written (via MASTER-PROMPT) | Raised haze alpha so it reads on the night background | Haze + scroll engine; reduced motion sets haze values instantly, no tweens | see git log |
 | 06 | As written | Added haze.getState() (read by scroll.js and flip.js) so tweens start from the current haze; pin uses refreshPriority so later triggers include pin spacing; columns dim their children because the reveal tween owns the column opacity | Flip pinned on desktop, per-column triggers on phones and reduced motion | see git log |
 | 07 | As written | | Chart toggles with arrow keys; summary/aria-label generated from data. Unsure: formatPct is duplicated in flip.js and charts.js (no shared file allowed by the steps); favicon 404 is the only console error, left for step 14 | see git log |
-| 08 | | | | |
+| 08 | As written | Wind toggle built as two pressed-state buttons in a labelled group (clearer than one button whose label changes) | Four SVG diagrams; captions from E7/E8; reduced motion leaves static states via base.css | see git log |
 | 09 | | | | |
 | 10 | | | | |
 | 11 | | | | |

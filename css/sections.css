@@ -47,3 +47,41 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 .figure-number { font-family: var(--font-display); font-size: var(--step-4); font-variant-numeric: tabular-nums; }
 .figure-qualifier { display: block; font-size: var(--step--1); color: var(--ink-dim); }
 .chart-summary { margin-top: var(--space-3); }
+/* Weather diagrams (js/weather.js) */
+.weather-visual { margin-top: var(--space-4); }
+.weather-visual svg { display: block; width: 100%; height: auto; overflow: hidden; }
+.wx-city { fill: var(--night); stroke: var(--ink-dim); stroke-width: 1; }
+.wx-ground { stroke: var(--ink-dim); stroke-width: 1; }
+.wx-dot { fill: var(--haze-mid); opacity: 0.85; }
+.wx-label { fill: var(--ink-dim); font: 13px var(--font-body); }
+.wx-strong { fill: var(--ink); font-weight: 500; }
+.wx-label.is-hidden { opacity: 0; }
+.wx-caption { color: var(--ink-dim); font-size: var(--step--1); margin: var(--space-3) 0 0; }
+.wx-toggle { font: inherit; font-size: var(--step--1); color: var(--ink); background: transparent; border: 1px solid var(--accent-line); border-radius: 999px; padding: var(--space-2) var(--space-4); min-height: 44px; cursor: pointer; }
+.wx-toggles { display: flex; gap: var(--space-2); margin-bottom: var(--space-3); }
+.wx-toggle[aria-pressed="true"] { background: var(--ink); color: var(--night); }
+.wx-pos { transition: transform 1.2s var(--ease-out); }
+.wx-streak { stroke: var(--accent-line); stroke-width: 1; stroke-dasharray: 18 14; opacity: 0; transition: opacity 0.6s; }
+.is-strong .wx-streak { opacity: 1; }
+.is-strong .wx-dot { animation: wx-stream 3s linear infinite; }
+.weather-visual:not(.is-strong) .wx-pos .wx-dot { animation: wx-linger 4s ease-in-out infinite alternate; }
+@keyframes wx-stream { from { transform: translateX(-40px); } to { transform: translateX(340px); } }
+@keyframes wx-linger { from { transform: translate(-3px, 2px); } to { transform: translate(3px, -2px); } }
+.wx-pair { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+@media (min-width: 480px) and (max-width: 759px), (min-width: 1000px) { .wx-pair { grid-template-columns: 1fr 1fr; } }
+.wx-drop { stroke: var(--clean); stroke-width: 1.5; transform: translate(var(--x), 30px); animation: wx-fall 1.4s linear infinite; }
+@keyframes wx-fall { from { transform: translate(var(--x), 0); } to { transform: translate(var(--x), 120px); } }
+.wx-washout { animation: wx-fade 4s ease-in-out infinite; }
+@keyframes wx-fade { 0%, 30% { opacity: 0.85; } 70%, 100% { opacity: 0.1; } }
+.wx-arrow { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.wx-lid-wrap { display: flex; gap: var(--space-3); align-items: stretch; }
+.wx-lid-wrap svg { flex: 1; min-width: 0; }
+.wx-lid-control { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); font-size: var(--step--1); color: var(--ink-dim); }
+.wx-lid-control input { writing-mode: vertical-lr; direction: rtl; flex: 1; min-height: 120px; width: 44px; accent-color: var(--clean); }
+.wx-lid { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 6 4; }
+.wx-traj { fill: none; stroke-width: 3; stroke-linecap: round; }
+.wx-traj-north { stroke: var(--haze-mid); }
+.wx-traj-south { stroke: var(--clean); }
+.wx-head-north { fill: var(--haze-mid); }
+.wx-head-south { fill: var(--clean); }
+.wx-place { fill: var(--ink); }
