@@ -8,6 +8,7 @@ import { initCityChart } from './charts.js';
 import { initWeather } from './weather.js';
 import { initZones } from './zones.js';
 import { initTooltips } from './tooltips.js';
+import { initQuiz } from './quiz.js';
 
 async function start() {
   const haze = createHaze(document.getElementById('haze'));
@@ -19,6 +20,7 @@ async function start() {
     initWeather();
     initZones({ data });
     initTooltips({ glossary: data.glossary });
+    initQuiz({ quiz: data.quiz });
   } catch (err) {
     console.error(err);
   }

@@ -103,3 +103,21 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 /* Glossary tooltips (js/tooltips.js) */
 .term-repeat { border-bottom: none; cursor: auto; }
 .tooltip { position: fixed; z-index: 20; max-width: min(280px, calc(100vw - 16px)); padding: var(--space-3) var(--space-4); background: var(--ink); color: var(--night); border-radius: 8px; font-size: var(--step--1); line-height: 1.45; pointer-events: none; }
+/* Quiz (js/quiz.js) */
+.quiz { border: 1px solid var(--accent-line); border-radius: var(--radius); padding: var(--space-5); background: var(--night-2); margin-block: var(--space-6); }
+.quiz-progress { color: var(--ink-dim); font-size: var(--step--1); }
+.quiz fieldset { border: 0; padding: 0; margin: 0 0 var(--space-4); }
+.quiz legend { font-family: var(--font-display); font-size: var(--step-1); line-height: 1.25; margin-bottom: var(--space-4); }
+.quiz-option { display: flex; gap: var(--space-3); align-items: flex-start; min-height: 44px; padding: var(--space-3); margin-bottom: var(--space-2); border: 1px solid var(--accent-line); border-radius: 8px; cursor: pointer; }
+.quiz-option input { width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; flex: none; accent-color: var(--clean); }
+.quiz-option:has(input:focus-visible) { outline: 2px solid var(--clean); outline-offset: 3px; }
+.quiz-option.is-correct { border-color: var(--clean); border-width: 2px; }
+.quiz-option.is-wrong { border-color: var(--haze-heavy); border-style: dashed; border-width: 2px; }
+.quiz-mark { margin-left: auto; font-weight: 600; }
+.quiz-button { font: inherit; min-height: 44px; padding: var(--space-3) var(--space-5); border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: var(--night); cursor: pointer; }
+.quiz-button:disabled { opacity: 0.5; cursor: not-allowed; }
+.quiz-verdict { font-weight: 600; }
+.quiz-verdict.is-correct { color: var(--clean); }
+.quiz-verdict.is-wrong { color: var(--haze-mid); }
+.quiz-score { font-family: var(--font-display); font-size: var(--step-2); }
+.quiz-feedback:focus { outline: none; }
