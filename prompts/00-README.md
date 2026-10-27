@@ -53,6 +53,6 @@ Record every prompt actually used, including follow-ups. This log is part of the
 | 10 | As written | | 8 terms matched, no warnings; tap/focus/Escape tested; tooltip clamped inside 375 px | see git log |
 | 11 | As written | | Full run-through and Try again tested; right/wrong shown by text, ✓/✗ and solid vs dashed border | see git log |
 | 12 | As written | | Takeaway rewritten (two paragraphs, under 120 words), caveat panel with icon, closing question and source block; haze 0.25 already set on #meaning so scroll.js unchanged | see git log |
-| 13 | | | | |
+| 13 | As written | Report findings table first; fix only high and medium | Lighthouse a11y 100. Fixed: tabpanel moved off figure, dimmed opacity 0.4 to 0.7, wordmark 44px, main tabindex=-1. Left (low): inline term height, haze overlap on small dim text, inactive borders, 10px chart ticks | see git log |
 | 14 | | | | |
 | 15 | | | | |

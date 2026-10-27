@@ -11,7 +11,7 @@ section { padding-block: var(--space-8); }
 .tabs { display: flex; gap: var(--space-3); margin-block: var(--space-4); }
 .tabs button { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--accent-line); border-radius: 999px; padding: var(--space-3) var(--space-5); min-height: 44px; cursor: pointer; }
 .tabs button[aria-selected="true"] { background: var(--ink); color: var(--night); }
-#city-panel { margin: 0; }
+#city-panel figure { margin: 0; }
 #city-panel canvas { width: 100%; }
 .chart-box { position: relative; height: 34rem; }
 @media (max-width: 699px) { .chart-box { height: max(60vh, 26rem); } }
@@ -31,12 +31,12 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 .caveat ul { margin: 0; padding-left: 1.2rem; }
 .weather-note { margin-top: var(--space-5); }
 .site-header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; padding-block: var(--space-4); }
-.wordmark { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); color: var(--ink); text-decoration: none; letter-spacing: 0.02em; }
+.wordmark { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); color: var(--ink); text-decoration: none; letter-spacing: 0.02em; display: inline-flex; align-items: center; min-height: 44px; }
 .site-footer { position: relative; z-index: 1; padding-block: var(--space-6); border-top: 1px solid var(--accent-line); }
 .site-footer p { color: var(--ink-dim); font-size: var(--step--1); margin: 0; }
 /* Columns dim their children: the reveal tween leaves an inline opacity on the column itself. */
 .flip-col > *, .figure-card { transition: opacity 0.4s var(--ease-out); }
-.flip-col.is-dim > *, .figure-card.is-dim { opacity: 0.4; }
+.flip-col.is-dim > *, .figure-card.is-dim { opacity: 0.7; }
 .flip-col { transition: border-color 0.4s var(--ease-out); }
 .flip-col:not(.is-dim):has(~ .is-dim), .is-dim ~ .flip-col:not(.is-dim) { border-color: var(--ink-dim); }
 .flip-figures { display: grid; gap: var(--space-4); grid-template-columns: 1fr 1fr; margin-top: var(--space-5); }
@@ -127,3 +127,4 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 .closing-question { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.25; margin-block: var(--space-7) var(--space-6); }
 .source-block { border-top: 1px solid var(--accent-line); padding-top: var(--space-4); }
 .source-block h3 { font-family: var(--font-body); font-size: var(--step--1); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); margin-bottom: var(--space-2); }
+main:focus { outline: none; }
