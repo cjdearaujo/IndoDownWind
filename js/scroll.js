@@ -5,9 +5,18 @@ export function initScroll({ haze }) {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
 
+  // Blocks are hidden only here, once GSAP is known to work, so a failed load leaves everything visible.
+  // One batch per section, so blocks in a section arrive one after another.
   if (!reduceMotion) {
-    gsap.utils.toArray('[data-reveal]').forEach((el) => {
-      gsap.from(el, { opacity: 0, y: 24, duration: 0.9, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
+    document.querySelectorAll('section').forEach((section) => {
+      const items = section.querySelectorAll('[data-reveal]');
+      if (!items.length) return;
+      gsap.set(items, { opacity: 0, y: 16 });
+      ScrollTrigger.batch(items, {
+        start: 'top 85%',
+        once: true,
+        onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', stagger: 0.12 }),
+      });
     });
   }
 
