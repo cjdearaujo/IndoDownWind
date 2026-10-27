@@ -41,10 +41,10 @@ Record every prompt actually used, including follow-ups. This log is part of the
 
 | Step | Prompt used (or "as written") | Follow-up prompts | Result | Commit |
 | --- | --- | --- | --- | --- |
-| 01 | | | | |
-| 02 | | | | |
-| 03 | | | | |
-| 04 | | | | |
+| 01 | Verified (scaffold) | | Checklist passed; page and data load, no console errors | abfecbd |
+| 02 | Verified (scaffold) | | JSON valid; 3 stated, 23 approximate; loadAll() OK | abfecbd |
+| 03 | Verified (scaffold) | | No stray colours; contrast ink 16.96:1, ink-dim 8.84:1 on --night | abfecbd |
+| 04 | Verified (scaffold) | | Copy and terms OK. Unsure: #cities/#zones/#meaning use the prompt titles as eyebrows with editorial h2s; kept as scaffolded | abfecbd |
 | 05 | | | | |
 | 06 | | | | |
 | 07 | | | | |
