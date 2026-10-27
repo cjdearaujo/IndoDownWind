@@ -12,8 +12,10 @@ export function createHaze(canvas) {
   const ctx = canvas.getContext('2d');
   const stops = [readColour('--clean'), readColour('--haze-mid'), readColour('--haze-heavy')];
   let level = 0.5, wind = 0.1, particles = [], w = 0, h = 0, frame = null;
+  // Slow-device guard: if frames stay above 24 ms for 2 s, halve the particle cap once.
+  let scale = 1, slowSince = null, last = 0;
 
-  function maxParticles() { return window.innerWidth < 700 ? 80 : 220; }
+  function maxParticles() { return Math.round((window.innerWidth < 700 ? 80 : 220) * scale); }
 
   function makeParticle() {
     return { x: Math.random() * w, y: Math.random() * h, r: 20 + Math.random() * 60, vy: (Math.random() - 0.5) * 0.15, seed: Math.random() };
@@ -57,7 +59,13 @@ export function createHaze(canvas) {
     }
   }
 
-  function step() {
+  function step(now) {
+    const dt = last ? now - last : 0;
+    last = now;
+    if (scale === 1 && dt > 24) {
+      slowSince ??= now;
+      if (now - slowSince > 2000) { scale = 0.5; particles.length = maxParticles(); }
+    } else slowSince = null;
     const speed = 0.2 + wind * 2.5;
     for (const p of particles) {
       p.x += speed * (0.6 + p.seed);
@@ -72,10 +80,12 @@ export function createHaze(canvas) {
   }
 
   function start() { if (!reduceMotion && frame === null) frame = requestAnimationFrame(step); }
-  function stop() { if (frame !== null) cancelAnimationFrame(frame); frame = null; }
+  function stop() { if (frame !== null) cancelAnimationFrame(frame); frame = null; last = 0; slowSince = null; }
   function onVisibility() { document.hidden ? stop() : start(); }
 
-  window.addEventListener('resize', resize);
+  let resizeQueued = false;
+  const onResize = () => { if (!resizeQueued) { resizeQueued = true; requestAnimationFrame(() => { resizeQueued = false; resize(); }); } };
+  window.addEventListener('resize', onResize);
   document.addEventListener('visibilitychange', onVisibility);
   resize();
   draw();
@@ -87,7 +97,7 @@ export function createHaze(canvas) {
     getState() { return { level, wind }; },
     destroy() {
       stop();
-      window.removeEventListener('resize', resize);
+      window.removeEventListener('resize', onResize);
       document.removeEventListener('visibilitychange', onVisibility);
       ctx.clearRect(0, 0, w, h);
     },

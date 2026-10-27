@@ -13,8 +13,11 @@ section { padding-block: var(--space-8); }
 .tabs button[aria-selected="true"] { background: var(--ink); color: var(--night); }
 #city-panel figure { margin: 0; }
 #city-panel canvas { width: 100%; }
-.chart-box { position: relative; height: 34rem; }
-@media (max-width: 699px) { .chart-box { height: max(60vh, 26rem); } }
+/* Reserve the chart height before Chart.js runs so nothing jumps. */
+#city-chart, .chart-box { height: 34rem; }
+@media (max-width: 699px) { #city-chart, .chart-box { height: max(60vh, 26rem); } }
+.chart-box.is-fallback { height: auto; }
+.chart-box { position: relative; }
 .chart-legend { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); margin-block: var(--space-4) var(--space-2); font-size: var(--step--1); color: var(--ink-dim); }
 .chart-legend span { display: inline-flex; align-items: center; gap: var(--space-2); }
 .swatch { display: inline-block; width: 1.5rem; height: 0.9rem; border-radius: 2px; background: var(--haze-mid); }
@@ -133,3 +136,5 @@ main:focus { outline: none; }
   html { scroll-snap-type: y proximity; }
   main > section { scroll-snap-align: start; }
 }
+.chart-fallback, .data-error { color: var(--ink); border: 1px dashed var(--ink-dim); border-radius: 8px; padding: var(--space-3) var(--space-4); }
+.noscript-note { padding: var(--space-3) var(--space-4); border: 1px dashed var(--ink-dim); border-radius: 8px; color: var(--ink); font-size: var(--step--1); }

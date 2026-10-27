@@ -78,6 +78,12 @@ export function initCityChart({ data }) {
 
   let chart = null;
   if (typeof Chart !== 'undefined') chart = createChart(canvas, rows, records);
+  else {
+    // Chart.js did not load: the generated summary below becomes the chart.
+    box.innerHTML = '<p class="chart-fallback">The chart could not load; here is the data as text.</p>';
+    box.classList.add('is-fallback');
+    legend.remove();
+  }
 
   function select(winter, focus = false) {
     tabs.forEach((tab) => {
