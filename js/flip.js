@@ -65,28 +65,38 @@ export function initFlip({ data, haze }) {
 
   if (!reduceMotion) cards.forEach(countUp);
 
-  ScrollTrigger.matchMedia({
-    '(min-width: 700px) and (prefers-reduced-motion: no-preference)': () => {
-      ScrollTrigger.create({
+  const pinMedia = window.matchMedia('(min-width: 700px) and (prefers-reduced-motion: no-preference)');
+  // Pin only when the whole section fits on screen; otherwise its top would be pushed off-screen.
+  const shouldPin = () => pinMedia.matches && section.offsetHeight <= window.innerHeight;
+  let triggers = [], pinned = null;
+
+  function build() {
+    triggers.forEach((t) => t.kill(true));
+    clear();
+    pinned = shouldPin();
+    if (pinned) {
+      triggers = [ScrollTrigger.create({
         trigger: section,
-        // A section taller than the screen pins at its bottom so nothing is hidden.
-        start: () => (section.offsetHeight > window.innerHeight ? 'bottom bottom' : 'top top'),
+        start: 'top top',
         end: '+=120%',
         pin: true,
-        invalidateOnRefresh: true,
         refreshPriority: 1, // created after scroll.js triggers, but must measure first so they include the pin spacing
         onUpdate: (self) => setPhase(self.progress < 0.5 ? 0 : 1),
         onLeave: clear,
         onLeaveBack: clear,
-      });
-    },
-    '(max-width: 699px), (prefers-reduced-motion: reduce)': () => {
-      columns.forEach((col, i) => {
-        ScrollTrigger.create({ trigger: col, start: 'top 60%', end: 'bottom 40%', onEnter: () => setPhase(i), onEnterBack: () => setPhase(i) });
-      });
-      ScrollTrigger.create({ trigger: section, start: 'top bottom', end: 'bottom top', onLeave: clear, onLeaveBack: clear });
-    },
+      })];
+    } else {
+      triggers = columns.map((col, i) => ScrollTrigger.create({ trigger: col, start: 'top 60%', end: 'bottom 40%', onEnter: () => setPhase(i), onEnterBack: () => setPhase(i) }));
+      triggers.push(ScrollTrigger.create({ trigger: section, start: 'top bottom', end: 'bottom top', onLeave: clear, onLeaveBack: clear }));
+    }
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+  }
+
+  build();
+  let queued = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(queued);
+    queued = setTimeout(() => { if (shouldPin() !== pinned) build(); }, 200);
   });
-  ScrollTrigger.sort();
-  ScrollTrigger.refresh();
 }

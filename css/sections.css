@@ -138,3 +138,17 @@ main:focus { outline: none; }
 }
 .chart-fallback, .data-error { color: var(--ink); border: 1px dashed var(--ink-dim); border-radius: 8px; padding: var(--space-3) var(--space-4); }
 .noscript-note { padding: var(--space-3) var(--space-4); border: 1px dashed var(--ink-dim); border-radius: 8px; color: var(--ink); font-size: var(--step--1); }
+/* Compact #flip on wider screens so the whole section fits one viewport and can pin at its top. */
+#flip { scroll-snap-align: none; }
+@media (min-width: 700px) {
+  #flip { padding-block: var(--space-5); }
+  #flip h2 { margin-bottom: var(--space-2); }
+  #flip .container > p { max-width: none; margin-bottom: var(--space-2); }
+  #flip .flip-columns { margin-block: var(--space-4); gap: var(--space-4); }
+  #flip .flip-col { padding: var(--space-4) var(--space-5); }
+  #flip .flip-col h3 { margin-bottom: var(--space-2); }
+  #flip .flip-col p { margin-bottom: 0; }
+  #flip .flip-figures { margin-top: var(--space-4); }
+  #flip .figure-winter { display: inline; margin-left: var(--space-1); }
+  #flip .figure-number { font-size: var(--step-3); }
+}
