@@ -7,6 +7,7 @@ import { initFlip } from './flip.js';
 import { initCityChart } from './charts.js';
 import { initWeather } from './weather.js';
 import { initZones } from './zones.js';
+import { initTooltips } from './tooltips.js';
 
 async function start() {
   const haze = createHaze(document.getElementById('haze'));
@@ -17,6 +18,7 @@ async function start() {
     initCityChart({ data });
     initWeather();
     initZones({ data });
+    initTooltips({ glossary: data.glossary });
   } catch (err) {
     console.error(err);
   }

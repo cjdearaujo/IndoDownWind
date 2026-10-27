@@ -100,3 +100,6 @@ figcaption, .chart-summary, .source, .weather-note, .haze-key { color: var(--ink
 .zone-places li { margin-bottom: var(--space-2); }
 .zone-callout { border-left: 3px solid var(--clean); padding: var(--space-3) var(--space-5); background: var(--night-2); border-radius: 0 var(--radius) var(--radius) 0; }
 .zone-callout p:last-child { margin-bottom: 0; }
+/* Glossary tooltips (js/tooltips.js) */
+.term-repeat { border-bottom: none; cursor: auto; }
+.tooltip { position: fixed; z-index: 20; max-width: min(280px, calc(100vw - 16px)); padding: var(--space-3) var(--space-4); background: var(--ink); color: var(--night); border-radius: 8px; font-size: var(--step--1); line-height: 1.45; pointer-events: none; }
